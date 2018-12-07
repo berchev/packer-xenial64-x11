@@ -94,7 +94,8 @@
     {
       "type": "vagrant",
       "keep_input_artifact": true,
-      "output": "{{.BuildName}}.box"
+      "output": "{{.BuildName}}.box",
+      "vagrantfile_template": "Vagrantfile.tpl"
     }
   ]
 }
