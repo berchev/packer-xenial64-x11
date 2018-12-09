@@ -8,7 +8,7 @@ Downloading the content of this repo, you will have all needed configuration fil
 - `http/preseed.cfg` - file containing base configuration during the installation process
 - `scripts/provision.sh` - bash script which purpose is to configure the box environment
 - `template.json` - file which **Packer** use in order to create our box
-
+- `Vagrantfile.tpl` - file needed durung box creation. Purpose of this file is to determine how should look like default Vagrantfile of the box.
 ## Requiered software:
 In order to build your box you need to have **Packer** tool installed.
 
@@ -51,7 +51,7 @@ You have two options here:
 
 Note that **Option B** have one serious advantage - you can access your box from everywhere! On everyone computer with access to Internet.
 
-### Option A - Add and use nginx box locally
+### Option A - Add and use packer-xenial64-x11 box locally
 - On your terminal type: `vagrant box add --name <box_name> ubuntu-1604-vbox.box` , where `<box_name>` is the name which you pick for your box. For example: x11 (it is good approach to use lowercase letters in Linux)
 - On your terminal type: `vagrant init x11`, where x11 is the name which we picked in step 1. 
 It can be any other name!
@@ -62,7 +62,7 @@ It can be any other name!
 - Type: `vagrant halt` in order to poweroff the box
 - Type: `vagrant destroy` in order to destroy the created box
 
-### Option B - Add and use nginx box from Vagrant cloud
+### Option B - Add and use packer-xenial64-x11 box from Vagrant cloud
 - Create account in the [Vagrant cloud](https://app.vagrantup.com/)
 - Click on **New Vagrant Box**
 - Fill in **Name** field
