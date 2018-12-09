@@ -2,3 +2,4 @@
 output-ubuntu-1604-vbox/
 packer_cache/
 ubuntu-1604-vbox.box
+Vagrantfile
