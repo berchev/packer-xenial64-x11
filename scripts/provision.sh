@@ -67,10 +67,23 @@ rm -f /EMPTY
 apt-get update
 apt-get install -y x11-apps
 
-# Install vim, ruby, curl
-apt-get install -y vim ruby-full curl libtcltk-ruby zlib1g-dev liblzma-dev
+#Install vim and curl
+apt-get install -y vim curl
+
+# Install ruby + some ruby libraries
+apt-get install -y ruby-full libtcltk-ruby zlib1g-dev liblzma-dev
 gem install rails
 gem update --system
+
+# Install and setup python3.6 as default + idle
+apt-get install -y software-properties-common
+add-apt-repository -y ppa:jonathonf/python-3.6
+apt-get update
+apt-get install -y python3.6
+update-alternatives --install /usr/bin/python3 python3 /usr/bin/python3.5 1
+update-alternatives --install /usr/bin/python3 python3 /usr/bin/python3.6 2
+echo -ne '\n' | update-alternatives --config python3
+apt-get install -y idle-python3.6
 
 # Install all needed for Kitchen tool
 apt-get install -y rbenv ruby-dev ruby-bundler
