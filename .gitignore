@@ -3,3 +3,5 @@ output-ubuntu-1604-vbox/
 packer_cache/
 ubuntu-1604-vbox.box
 Vagrantfile
+xenial64x11-vbox.box
+xenial64x11-vmware.box
