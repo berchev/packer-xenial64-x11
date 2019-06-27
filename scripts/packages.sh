@@ -48,10 +48,8 @@ apt-get install -y idle-python3.6
 apt-get update
 apt-get install -y x11-apps
 
-# Install ruby + some ruby libraries
-apt-get install -y ruby-full libtcltk-ruby zlib1g-dev liblzma-dev
-gem install rails
-gem update --system
+# Install ruby and rails 
+# will be done manually
 
 # Install all needed for Kitchen tool
 apt-get install -y rbenv ruby-dev ruby-bundler
