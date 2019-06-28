@@ -52,14 +52,6 @@ apt-get install -y x11-apps
 # will be done manually
 
 # Install all needed for Kitchen tool
-apt-get install -y rbenv ruby-dev ruby-bundler
-grep -i rbenv /home/vagrant/.bash_profile &>/dev/null || {
-  touch /home/vagrant/.bash_profile
-  chown vagrant.vagrant /home/vagrant/.bash_profile
-  echo 'eval "$(rbenv init -)"' | sudo tee -a /home/vagrant/.bash_profile
-  echo 'true' | sudo tee -a /home/vagrant/.bash_profile
-  echo 'export PATH="$HOME/.rbenv/bin:$PATH"' | sudo tee -a /home/vagrant/.bash_profile
-}
 
 # prep for LXD
 cat > /etc/security/limits.d/lxd.conf <<EOF
